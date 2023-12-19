@@ -20,6 +20,7 @@ def load_page(link: str, code: str):
         with open(save_path, encoding='utf-8') as f:
             return "".join(f.readlines())
 
+    print(f"Downloading: {code}")
     # Ensure API is not hit faster than the RATE_LIMIT
     global last_poll
     if time() - last_poll < RATE_LIMIT:
@@ -35,6 +36,25 @@ def load_page(link: str, code: str):
         f.write(content)
 
     return content
+
+
+def get_courses():
+    """ Return dictionary of all courses on search page. """
+    content = load_page(
+        f"{BASE_URL}/en/?Term=***&Type=course&MainFieldOfStudy=", "courses"
+    )
+    soup = BeautifulSoup(content, "html.parser")
+
+    courses: dict[str, dict[str, str]] = {}
+    pattern = re.compile(r'/en/kurs/([^/]+)')
+    for course in soup.find_all("a", attrs={"class": "pseudo-h3", "href": pattern}):
+        link = course["href"].lower()
+        code = re.findall(pattern, link)
+        code = unquote(code[0]).lower()
+        name = course.text.strip().lower().replace('\n', '')
+        courses[code] = {"name": name, "link": BASE_URL + link}
+
+    return courses
 
 
 def get_programs():
@@ -131,6 +151,9 @@ def get_course_info(link: str, code: str, name: str):
                 rows.append(" ".join([strip(td.text)
                             for td in row.find_all('td')]))
             course_text.extend([heads, *rows])
+            continue
+
+        if tag == "a" and "http" in text:
             continue
 
         print("Warning! New type found:", child)
