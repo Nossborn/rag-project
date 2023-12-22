@@ -1,1 +1,9 @@
 beautifulsoup4
+huggingface-hub
+langchain
+torch>=2.1.1+cu121
+transformers
+optimum
+sentence-transformers
+faiss-cpu
+auto-gptq
