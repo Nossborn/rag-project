@@ -1,12 +1,12 @@
 import re
+import spacy
 
+from dataset import StudieinfoDataset
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores.faiss import FAISS
-
-from dataset import StudieinfoDataset
 
 
 class RAG:
@@ -23,8 +23,8 @@ class RAG:
         )
 
         db = FAISS.from_documents(dataset, embeddings)
-        sk = {'k': k, 'fetch_k': k * 10}
 
+        sk = {'k': k, 'fetch_k': k * 10}
         self.retriever = db.as_retriever(search_kwargs=sk)
 
     def run(self, question: str):
@@ -37,9 +37,17 @@ class TFIDF:
         self.dataset = dataset
 
         self.vectorizer = TfidfVectorizer()
-        data = (doc.page_content for doc in self.dataset)
+        nlp = spacy.load('en_core_web_sm')
+        data = (self.preprocess(doc.page_content, nlp) for doc in self.dataset)
         self.docs = self.vectorizer.fit_transform(data)
         self.k = k
+
+    def preprocess(self, text: str, nlp: spacy.language.Language):
+        pre = " ".join([token.lemma_.lower() for token in nlp(text)
+                        if (not token.is_stop) and (not token.is_punct)])
+        pre = re.sub(" +", " ", pre)
+        pre = re.sub("\n ", "\n", pre)
+        return pre
 
     def run(self, question: str):
         q_vec = self.vectorizer.transform([question])
