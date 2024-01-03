@@ -1,0 +1,132 @@
+[
+    {
+        "question": "What course is most similar to text mining (TDDE16)?",
+        "answer": "natural language processing (TDDE09, 729A27)"
+    },{
+        "question": "What course is most similar to natural language processing (TDDE09)?",
+        "answer": "text mining (TDDE16)"
+    },{
+        "question": "What course is most similar to calculus in one variable 2 (TATA42)?",
+        "answer": "calculus in one variable 1 (TATA41)"
+    },{
+        "question": "What course is most similar to calculus in one variable 1 (TATA41)?",
+        "answer": "calculus in one variable 2 (TATA42)"
+    },{
+        "question": "What course is most similar to probability, first course (TAMS14)?",
+        "answer": "statistics, first course (TAMS24)"
+    },{
+        "question": "What course is most similar to statistics, first course (TAMS24)?",
+        "answer": "probability, first course (TAMS14)"
+    },{
+        "question": "What course is most similar to linear algebra, honours course (TATA53)?",
+        "answer": "linear algebra (TATA24)"
+    },{
+        "question": "What course is most similar to linear algebra (TATA24)?",
+        "answer": "linear algebra, honours course (TATA53)"
+    },{
+        "question": "What course is most similar to modern physics I (TFYA73)?",
+        "answer": "modern physics II (TFYA74)"
+    },{
+        "question": "What course is most similar to modern physics II (TFYA74)?",
+        "answer": "modern physics I (TFYA74)"
+    },{
+        "question": "What course is most similar to engineering mechanics y (TMME12)?",
+        "answer": "engineering mechanics II (TMME04)"
+    },{
+        "question": "What course is most similar to engineering mechanics II (TMME04)?",
+        "answer": "engineering mechanics y (TMME12)"
+    },{
+        "question": "What course is most similar to oscillations and mechanical waves (TFYA81)?",
+        "answer": "optics - theory and application (TFYA84)"
+    },{
+        "question": "What course is most similar to optics - theory and application (TFYA84)?",
+        "answer": "oscillations and mechanical waves (TFYA81)"
+    },{
+        "question": "What course is most similar to machine learning (TDDE01)?",
+        "answer": "advanced machine learning (TDDE15)"
+    },{
+        "question": "What course is most similar to advanced machine learning (TDDE15)?",
+        "answer": "machine learning (TDDE01)"
+    },{
+        "question": "What course is most similar to introduction to optimization (TAOP07)?",
+        "answer": "optimization, advanced course (TAOP24)"
+    },{
+        "question": "What course is most similar to optimization, advanced course (TAOP24)?",
+        "answer": "introduction to optimization (TAOP07)"
+    },{
+        "question": "What course is most similar to applied physics - bachelor project (TFYA75)?",
+        "answer": "electronics engineering - bachelor project (TSEA56)"
+    },{
+        "question": "What course is most similar to electronics engineering - bachelor project (TSEA56)?",
+        "answer": "applied physics - bachelor project (TFYA75)"
+    },{
+        "question": "What course is most similar to advanced electromagnetics (TFYB01)?",
+        "answer": "electromagnetic field theory (TFYA13)"
+    },{
+        "question": "What course is most similar to electromagnetic field theory (TFYA13)?",
+        "answer": "advanced electromagnetics (TFYB01)"
+    },{
+        "question": "What are the recommended prerequists, if any, for text mining (TDDE16)?",
+        "answer": "discrete mathematics, calculus, linear algebra, probability theory, programming, data structures and algorithms, machine learning"
+    },{
+        "question": "What are the recommended prerequists, if any, for natural language processing (TDDE09)?",
+        "answer": "discrete mathematics, calculus, linear algebra, probability theory, good knowledge of programming, data structures and algorithms, machine learning"
+    },{
+        "question": "What are the recommended prerequists, if any, for calculus in one variable 2 (TATA42)?",
+        "answer": "calculus in one variable 1 (TATA41)"
+    },{
+        "question": "What are the recommended prerequists, if any, for calculus in one variable 1 (TATA41)?",
+        "answer": "foundation course in mathematics (TATB01/TATM79)"
+    },{
+        "question": "What are the recommended prerequists, if any, for probability, first course (TAMS14)?",
+        "answer": "Linear algebra, differential and integral calculus, series"
+    },{
+        "question": "What are the recommended prerequists, if any, for statistics, first course (TAMS24)?",
+        "answer": "Calculus, matrix algebra and a first course in probability theory (TAMS14)"
+    },{
+        "question": "What are the recommended prerequists, if any, for linear algebra, honours course (TATA53)?",
+        "answer": "A basic course in linear algebra (TATA24)"
+    },{
+        "question": "What are the recommended prerequists, if any, for linear algebra (TATA24)?",
+        "answer": "secondary school mathematics (none is okay too)"
+    },{
+        "question": "What are the recommended prerequists, if any, for modern physics I (TFYA73)?",
+        "answer": "Mathematics, Calculus, Linear algebra, Mechanics, Wave Motion, Electromagnetic Field Theory"
+    },{
+        "question": "What are the recommended prerequists, if any, for modern physics II (TFYA74)?",
+        "answer": "Calculus, Mechanics, Wave Motion and Electromagnetic Field Theory "
+    },{
+        "question": "What are the recommended prerequists, if any, for engineering mechanics y (TMME12)?",
+        "answer": "Basic courses in algebra and calculus, wave physics"
+    },{
+        "question": "What are the recommended prerequists, if any, for engineering mechanics II (TMME04)?",
+        "answer": "Statics and particle mechanics, Basic courses in algebra and analysis (especially the geometric interpretations of scalar and vector products, and ordinary differential equations)"
+    },{
+        "question": "What are the recommended prerequists, if any, for oscillations and mechanical waves (TFYA81)?",
+        "answer": "Calculus in one variable, Linear algebra"
+    },{
+        "question": "What are the recommended prerequists, if any, for optics - theory and application (TFYA84)?",
+        "answer": "Calculus in one and many variables, Oscillations and waves, Linear algebra"
+    },{
+        "question": "What are the recommended prerequists, if any, for machine learning (TDDE01)?",
+        "answer": "Probability theory, Statistics, Mathematical analysis, Linear Algebra, Basic programming"
+    },{
+        "question": "What are the recommended prerequists, if any, for advanced machine learning (TDDE15)?",
+        "answer": "Probability theory and Statistics, Bayesian Learning, Machine Learning, Mathematical analysis, Linear Algebra, Basic programming"
+    },{
+        "question": "What are the recommended prerequists, if any, for introduction to optimization (TAOP07)?",
+        "answer": "Calculus, linear algebra, and programming"
+    },{
+        "question": "What are the recommended prerequists, if any, for optimization, advanced course (TAOP24)?",
+        "answer": "Introduction to optimization (TAOP07)"
+    },{
+        "question": "What are the recommended prerequists, if any, for electronics engineering - bachelor project (TSEA56)?",
+        "answer": "programming, logic design, computer hardware and architecture and project methods"
+    },{
+        "question": "What are the recommended prerequists, if any, for advanced electromagnetics (TFYB01)?",
+        "answer": "Introductory course in electromagnetism, vector analysis, integral- and differential calculus in many variables, complex analysis, Fourier transforms"
+    },{
+        "question": "What are the recommended prerequists, if any, for electromagnetic field theory (TFYA13)?",
+        "answer": "Calculus with One and Several Variables, Vector Analysis"
+    }
+]

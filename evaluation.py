@@ -67,7 +67,7 @@ def evaluate_question(question: str, answer: str, context: str):
     print("-" * 125)
     print(f"Context:\n{context}")
     print("-" * 125)
-    print(f"Expected answer:\n{context}")
+    print(f"Expected answer:\n{answer}")
     print("-" * 125)
     print(f"Model answer:\n{context}")
 
@@ -101,6 +101,9 @@ def evaluate_reponses():
                       "answer quality": quality,
                       }
 
+        with open(EVALUATION_PATH, 'a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(evaluation.values())
 
 if __name__ == '__main__':
     parser = ArgumentParser(description='Evaluator of RAG pipeline.')
