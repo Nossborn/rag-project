@@ -24,11 +24,12 @@ class RAG:
 
         db = FAISS.from_documents(dataset, embeddings)
 
-        sk = {'k': k, 'fetch_k': k * 10}
+        sk = {'k': k, 'fetch_k': k * 10, 'lambda_mult': 0.10}
         self.retriever = db.as_retriever(search_kwargs=sk)
 
     def run(self, question: str):
-        return [c.page_content for c in self.retriever.invoke(question)]
+        return [StudieinfoDataset.prepend_metadata(doc)
+                for doc in self.retriever.invoke(question)]
 
 
 class TFIDF:
