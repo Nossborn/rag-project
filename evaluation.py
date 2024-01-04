@@ -62,7 +62,8 @@ def generate_responses():
     # Run pipeline for RAG
     retriver = RAG(dataset, k=3)
     model = AnswerModel(retriever=retriver)
-    for item in questions:
+    for i, item in enumerate(questions):
+        print(f"Processing question {i+1}")
         evaluations.append(pipeline(item["question"], item["answer"],
                                     model, "RAG"))
 
