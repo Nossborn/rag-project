@@ -8,15 +8,18 @@ from auto_gptq import exllama_set_max_input_length
 
 from retrivers import TFIDF, RAG
 
+from transformers import logging
+logging.set_verbosity_error()
+
 
 class AnswerModel:
 
     LM_NAME = "TheBloke/Mistral-7B-OpenOrca-GPTQ"
 
     LM_MAX_INPUT_LEN = 4096
-    LM_TEMP = 0.7
+    LM_TEMP = 0.5
 
-    TEMPLATE = re.sub(" +", " ",
+    TEMPLATE = re.sub("\n +", "\n",
                       """<|im_start|>system
                          Answer the question based only on the following context:
                          {context}<|im_end|>
@@ -57,4 +60,4 @@ class AnswerModel:
             "question": question
         })
         output = self.lm.invoke(instruction)
-        return instruction.to_string().strip(), output
+        return "\n".join(context).strip(), output

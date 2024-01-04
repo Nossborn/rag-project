@@ -11,7 +11,7 @@ class StudieinfoDataset:
         data_path = Path(path)
 
         self.documents: list[Document] = []
-        for path in data_path.glob(f"t*.txt"):
+        for path in data_path.glob(f"*.txt"):
             document = None
             with open(path, encoding="utf-8") as f:
                 document = "".join(f.readlines())
@@ -30,8 +30,8 @@ class StudieinfoDataset:
 
         # Seperates on new course info section
         seperator = r"\n\n(?=[^\n:]+:\n)"
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500,
-                                                       chunk_overlap=250,
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000,
+                                                       chunk_overlap=100,
                                                        separators=[seperator],
                                                        is_separator_regex=True)
         self.documents = text_splitter.split_documents(self.documents)
